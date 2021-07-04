@@ -1,22 +1,19 @@
 git status
-git init                         // initializes git in current repo.
-
-Flow of git:
-
-
-
-  
+git init                                            // initializes git in current repo.
 ```
-git add <file_name>         //to stage a particular file with name <file_name>
+git add <file_name>                                 //to stage a particular file with name <file_name>
 ```
 
 ```
 git add .                                           // stages new and modified files, without deleted
 git add -A                                          // stages ALL the files
 git add -u                                          // stages modified and deleted, without new
+
 ```
-git commit -m "<any_message>"         //this'll commit all the files in the staging area.
+git commit -m "<any_message>"                       //this'll commit all the files in the staging area.
 ```
+
+
 git config user.name "<new_name>"                  //to change the name in the current repo only.
 git config --global user.name "<new_name>"         //to change the name in all the repo.
 
@@ -27,7 +24,7 @@ git config --global user.email "<new_email>"       //to change the email in all 
 ```
 git push -u origin master                          // to push the changes to the github repo.
 git pull origin master                             // to pull a directory from the gitHub to the local machine.
-```
+
 
 ```
 git diff                                           // views the difference in all the files 
@@ -44,7 +41,7 @@ git reset <file_name>                              // to bring back a file from 
 git checkout <file_name>                           // to bring back a particular file from untracked state to its previous commit state.
 ```
 
-To clone any repo from github(OR to copy any repo from github to the machine), run the following
+To clone any repo from github(OR to copy any repo from github to the machine), run the following:
 ```
 step 1: Create a folder; initialize git in it(by firing "git init")
 step 2: git clone <link of that gitHub repo>
