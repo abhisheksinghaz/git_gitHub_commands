@@ -1,0 +1,64 @@
+git status
+git init                         // initializes git in current repo.
+
+Flow of git:
+
+
+
+  
+```
+git add <file_name>         //to stage a particular file with name <file_name>
+```
+
+```
+git add .                                           // stages new and modified files, without deleted
+git add -A                                          // stages ALL the files
+git add -u                                          // stages modified and deleted, without new
+```
+git commit -m "<any_message>"         //this'll commit all the files in the staging area.
+```
+git config user.name "<new_name>"                  //to change the name in the current repo only.
+git config --global user.name "<new_name>"         //to change the name in all the repo.
+
+git config user.email "<new_email>"                //to change the email address only in the current repo.
+git config --global user.email "<new_email>"       //to change the email in all the repositories.
+```
+
+```
+git push -u origin master                          // to push the changes to the github repo.
+git pull origin master                             // to pull a directory from the gitHub to the local machine.
+```
+
+```
+git diff                                           // views the difference in all the files 
+git diff <file_name>                               // to view the differences made in a particular file
+git diff --staged                                  // view the changes/differences made in all the files that are staged currently
+git diff --staged <file_name>                      // to view the differences made in a particular file which has been staged after making changes in it. 
+```
+ 
+```
+git reset                                          // to bring the files present in the staged state to untracked files ALSO CALLED UNSTAGING
+git checkout .                                     // to bring the untracked files back to their prev. commit state.
+
+git reset <file_name>                              // to bring back a file from staged state to untaracked one. ALSO CALLED UNSTAGING
+git checkout <file_name>                           // to bring back a particular file from untracked state to its previous commit state.
+```
+
+To clone any repo from github(OR to copy any repo from github to the machine), run the following
+```
+step 1: Create a folder; initialize git in it(by firing "git init")
+step 2: git clone <link of that gitHub repo>
+```
+
+Branching:
+```
+git branch                                         // lists all the existing branches in the current repo; the current branch in "GREEN" text color
+git branch <branch_name>                           // to create a new branch
+git checkout <branch_name>                         // to switch to the branch with branch name as <branch_name>
+
+git push origin <branch_name>                      // pushes the changes made to in the repo to the <branch_name> 
+git merge <branch_name>                            // merges the <branch_name> to the branch in which this command is getting executed.
+
+git branch -d <branch_name>                        // to delete the branch locally
+git push origin --delete <branch_name>             // to delete the branch from the gitHub also
+```
